@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>6f</title>
+</head>
+<body>
+<script>
+    let randomNumber = Math.random();
+    let result = '';
+    if (randomNumber < 0.5) {
+        console.log('heads');
+        result = 'heads';
+    } else {
+        console.log('tails');
+        result = 'tails';
+    }
+    let guess = 'heads';
+    guess===result ? console.log('You win!'): console.log('You lose!')
+    /*
+    if (guess===result) {
+        console.log('You win!');
+    } else {
+        console.log('You lose!');
+    }
+
+     */
+</script>
+</body>
+</html>
