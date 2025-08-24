@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>7c</title>
+  <style>
+      body {
+          background-color: gray;
+      }
+  </style>
+</head>
+<body>
+<script>
+    function greet(name) {
+        if (name===undefined) {
+            console.log('Hello there!')
+        } else if (name != undefined) {
+            console.log(`Hello ${name}!`);
+        }
+
+    }
+    greet(undefined);
+    greet('Dawid');
+    greet('Martina');
+    greet('Wojtek');
+</script>
+</body>
+</html>

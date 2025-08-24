@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="../../JavaScript%201/general.css">
+  <meta charset="UTF-8">
+  <title>6l</title>
+</head>
+<body>
+<p>Cart Quantity</p>
+
+<button onclick="
+updateCartQuantity(0, 'show');
+">Show Quantity</button>
+
+<button onclick="
+updateCartQuantity(1, 'normal');
+">Add to Cart</button>
+
+<button onclick="
+updateCartQuantity(2, 'normal');
+">+2</button>
+
+<button onclick="
+updateCartQuantity(3, 'normal');
+">+3</button>
+
+<button onclick="
+updateCartQuantity(4, 'normal');
+">+4</button>
+
+<button onclick="
+updateCartQuantity(5, 'normal');
+">+5</button>
+
+<button onclick="
+updateCartQuantity(-1, 'normal');
+">Remove from cart</button>
+
+<button onclick="
+updateCartQuantity(-2, 'normal');
+">-2</button>
+
+<button onclick="
+updateCartQuantity(-3, 'normal');
+">-3</button>
+
+
+<button onclick="
+  updateCartQuantity(0, 'reset');
+">Reset Cart</button>
+
+
+<script>
+    let cartQuantity = 0;
+    function updateCartQuantity(value, type) {
+        if (type === 'normal') {
+            if (cartQuantity+value >10) {
+                console.log('The cart is full');
+                return;
+
+            } else if (cartQuantity+value < 0) {
+                console.log('Not enough items in the cart')
+                return;
+
+            } else {
+                cartQuantity += value;
+                console.log(`Cart quantity: ${cartQuantity}`);
+            }
+
+        } else if (type === 'reset') {
+            cartQuantity = value;
+            console.log(`Cart quantity: ${cartQuantity}`);
+
+        } else if (type === 'show') {
+            console.log(`Cart quantity: ${cartQuantity}`);
+        }
+    }
+
+
+</script>
+</body>
+</html>
