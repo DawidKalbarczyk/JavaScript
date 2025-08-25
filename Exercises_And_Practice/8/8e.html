@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>8e</title>
+</head>
+<body>
+  <script>
+    const product1 = {
+        name: 'baseball',
+        price: 1000
+    }
+    const product2 = {
+        name: 'baseball',
+        price: 1000
+    }
+    const product3 = {
+        name: 'baseball',
+        price: 1001
+    }
+    function isSameProduct(product1, product2) {
+        if (JSON.stringify(product1)===JSON.stringify(product2)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    product1.price = product1.price + 1;
+    console.log(isSameProduct(product1, product2));
+  </script>
+</body>
+</html>
