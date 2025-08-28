@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>9b</title>
+</head>
+<body>
+  <button>9a</button>
+  <button class="secondButton" onclick="onClick();">9b</button>
+  <script>
+
+    function onClick() {
+        let changedButton = document.querySelector('.secondButton');
+        if  (changedButton.innerHTML === '9b') {
+            changedButton.innerHTML = '9b done!';
+        } else {
+            changedButton.innerHTML = '9b';
+        }
+
+    }
+
+  </script>
+</body>
+</html>

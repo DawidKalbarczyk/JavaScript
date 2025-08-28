@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>9h</title>
+  <style>
+      .textboxElement {
+          border-width: 1px;
+          border-style: solid;
+          border-color: black;
+          outline: none;
+      }
+    .textboxElement:focus {
+        border-color: blue;
+        border-width: 3px;
+    }
+  </style>
+</head>
+<body>
+  <input type="textbox" class="textboxElement" onkeyup="onKeyUp(event);">
+  <p class="textElement"></p>
+  <script>
+    function onKeyUp(event) {
+        const inputElement = document.querySelector('.textboxElement');
+        const textFromInput = inputElement.value;
+        document.querySelector('.textElement').innerHTML = textFromInput;
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="../../JavaScript%201/general.css">
+  <meta charset="UTF-8">
+  <title>9i</title>
+</head>
+<body>
+<p>Cart Quantity</p>
+
+<button onclick="
+updateCartQuantity(0, 'show');
+">Show Quantity</button>
+
+<button onclick="
+updateCartQuantity(1, 'normal');
+">Add to Cart</button>
+
+<button onclick="
+updateCartQuantity(2, 'normal');
+">+2</button>
+
+<button onclick="
+updateCartQuantity(3, 'normal');
+">+3</button>
+
+<button onclick="
+updateCartQuantity(4, 'normal');
+">+4</button>
+
+<button onclick="
+updateCartQuantity(5, 'normal');
+">+5</button>
+
+<button onclick="
+updateCartQuantity(-1, 'normal');
+">Remove from cart</button>
+
+<button onclick="
+updateCartQuantity(-2, 'normal');
+">-2</button>
+
+<button onclick="
+updateCartQuantity(-3, 'normal');
+">-3</button>
+
+
+<button onclick="
+  updateCartQuantity(0, 'reset');
+">Reset Cart</button>
+<p class="js-cartQuantity"></p>
+<p class="js-warning"></p>
+
+<script>
+    let cartQuantity = JSON.parse(localStorage.getItem('cartQuantity')) || 0;
+    document.querySelector('.js-cartQuantity')
+        .innerHTML = `Cart quantity: ${cartQuantity}`;
+    function updateCartQuantity(value, type) {
+        localStorage.getItem('cartQuantity');
+        if (type === 'normal') {
+            if (cartQuantity+value >10) {
+                warning = 'The cart is full';
+                document.querySelector('.js-warning')
+                    .innerHTML = warning;
+                return;
+
+            } else if (cartQuantity+value < 0) {
+                warning = 'Not enough items in the cart';
+                document.querySelector('.js-warning')
+                    .innerHTML = warning;
+                return;
+
+            } else {
+                cartQuantity += value;
+                console.log(`Cart quantity: ${cartQuantity}`);
+                document.querySelector('.js-warning')
+                    .innerHTML = null;
+            }
+
+        } else if (type === 'reset') {
+            cartQuantity = value;
+            console.log(`Cart quantity: ${cartQuantity}`);
+
+        } else if (type === 'show') {
+            console.log(`Cart quantity: ${cartQuantity}`);
+        }
+
+        document.querySelector('.js-cartQuantity')
+            .innerHTML = `Cart quantity: ${cartQuantity}`;
+
+        localStorage.setItem('cartQuantity', JSON.stringify(cartQuantity));
+    }
+
+
+</script>
+</body>
+</html>

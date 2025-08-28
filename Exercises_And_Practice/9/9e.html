@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>9e</title>
+</head>
+<body>
+<input type="textbox" class="js-textbox" placeholder="Name" onkeydown="isEnter(event)">
+<button onclick="jsNameBox()">Submit</button>
+<script>
+    function isEnter(variable) {
+        if (variable.key === 'Enter') {
+            jsNameBox();
+        }  else if (variable.key === 'Enter' && document.querySelector('.js-textbox').value === null) {
+            return;
+        }
+    }
+    function jsNameBox() {
+        let textboxValue = document.querySelector('.js-textbox');
+        textboxValue.value = `Your name is: ${textboxValue.value}`;
+    }
+</script>
+</body>
+</html>

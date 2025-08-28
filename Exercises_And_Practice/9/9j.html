@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>9j</title>
+  <style>
+      .grid {
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr 1fr;
+          column-gap: 8px;
+          row-gap: 12px;
+          margin-bottom: 12px;
+      }
+
+      .container {
+          width: 120px;
+      }
+      body {
+          background: gray;
+      }
+  </style>
+</head>
+<body>
+<p class="calculatorResultElement" style="max-width: 300px;"></p>
+<div class="container">
+  <div class="grid">
+    <button onclick="
+        updateCalculator('1');
+      ">1</button>
+
+    <button onclick="
+        updateCalculator('2');
+      ">2</button>
+
+    <button onclick="
+        updateCalculator('3');
+      ">3</button>
+
+    <button onclick="
+        updateCalculator('+');
+      ">+</button>
+
+    <button onclick="
+        updateCalculator('4');
+      ">4</button>
+
+    <button onclick="
+        updateCalculator('5');
+     ">5</button>
+
+    <button onclick="
+        updateCalculator('6');
+      ">6</button>
+
+    <button onclick="
+        updateCalculator('-');
+      ">-</button>
+
+    <button onclick="
+        updateCalculator('7');
+      ">7</button>
+
+    <button onclick="
+        updateCalculator('8');
+      ">8</button>
+
+    <button onclick="
+        updateCalculator('9');
+      ">9</button>
+
+    <button onclick="
+        updateCalculator('*');
+      ">*</button>
+
+    <button onclick="
+        updateCalculator('0');
+      ">0</button>
+
+    <button onclick="
+        updateCalculator('.');
+      ">.</button>
+
+    <button onclick="
+        updateCalculator('=');
+      ">=</button>
+
+    <button onclick="
+        updateCalculator('/');
+      ">/</button>
+  </div>
+  <button onclick="
+        updateCalculator('');
+    ">Clear</button>
+</div>
+<script>
+    let calculation = JSON.parse(localStorage.getItem('save')) || '';
+    updateCalculatorDisplay()
+    function updateCalculatorDisplay() {
+        document.querySelector('.calculatorResultElement').innerHTML = calculation;
+    }
+
+
+    function updateCalculator(value) {
+        if (value === '') {
+            calculation = '';
+        } else if (value === '=') {
+            if (calculation != '') {
+                calculation = eval(calculation);
+            }
+            else if (calculation === '') {
+                calculation = calculation;
+            }
+        } else {
+            calculation += value;
+        }
+        updateCalculatorDisplay();
+        localStorage.setItem('save', JSON.stringify(calculation));
+    }
+
+
+
+    /*document.addEventListener("contextmenu", (event) => {
+        event.preventDefault();  // blokuje menu
+        alert("Prawy przycisk wyłączony!");
+    });
+
+
+     */
+
+</script>
+</body>
+</html>

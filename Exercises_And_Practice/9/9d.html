@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>9d</title>
+</head>
+<body>
+  <input type="textbox" class="js-textbox" placeholder="Name">
+  <button onclick="jsNameBox()">Submit</button>
+  <script>
+    function jsNameBox() {
+        let textboxValue = document.querySelector('.js-textbox');
+        textboxValue.value = `Your name is: ${textboxValue.value}`;
+    }
+  </script>
+</body>
+</html>

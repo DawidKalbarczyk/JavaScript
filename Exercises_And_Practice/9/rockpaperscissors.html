@@ -25,6 +25,8 @@
     localStorage.removeItem('score');
     updateScoreElement();
   ">Reset Score</button>
+
+
 <script>
     let score = JSON.parse(localStorage.getItem('score')) || {
         wins: 0,
@@ -32,7 +34,6 @@
         ties: 0
     };
     updateScoreElement();
-    updateResultElement();
     /*
     if (score === null) {
         score = {

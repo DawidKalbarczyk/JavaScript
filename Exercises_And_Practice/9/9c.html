@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>9c</title>
+</head>
+<body>
+  <button class="js-button1" onclick="getValue('heads');">heads</button>
+  <button class="js-button2" onclick="getValue('tails')">tails</button>
+  <p class="js-paragraph"></p>
+  <script>
+    function getValue(value) {
+        let displayedText = document.querySelector('.js-paragraph');
+        displayedText.innerText = `You chose: ${value}`
+    }
+  </script>
+</body>
+</html>

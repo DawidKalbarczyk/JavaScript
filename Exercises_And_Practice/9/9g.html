@@ -2,35 +2,35 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>DOM</title>
+  <title>9g</title>
   <style>
-    body {
-        background-color: gray;
-    }
+      body {
+          background-color: gray;
+      }
   </style>
 </head>
 <body>
-  <p>YouTube Subscribe Button</p>
-  <button class="js-subscribe-button">Subscribe</button>
-  <p></p>
-  <p>Amazon Shipping Calculator</p>
-  <p>Orders under $40 = + $10 shipping.</p>
-  <p>Orders over $40 = FREE shipping.</p>
-  <input class="js-textbox" type="textbox" placeholder="Cost of order" onkeydown="
+<p>YouTube Subscribe Button</p>
+<button class="js-subscribe-button">Subscribe</button>
+<p></p>
+<p>Amazon Shipping Calculator</p>
+<p>Orders under $40 = + $10 shipping.</p>
+<p>Orders over $40 = FREE shipping.</p>
+<input class="js-textbox" type="textbox" placeholder="Cost of order" onkeydown="
       isEnter(event);
   ">
-  <button onclick="
+<button onclick="
     calculateTotal();
   ">Calculate</button>
-  <p class="js-total-cost"></p>
-  <script>
-      String(25);
-      console.log('25'- 5 );
-      console.log('25' + 5);
+<p class="js-total-cost"></p>
+<script>
+    String(25);
+    console.log('25'- 5 );
+    console.log('25' + 5);
 
-      window.document
-      window.console.log('window');
-      window.alert('')
+    window.document
+    window.console.log('window');
+    window.alert('')
     function isEnter(event) {
         if (event.key === 'Enter') {
             calculateTotal();
@@ -38,9 +38,9 @@
     }
     function calculateTotal() {
         const inputElement = document.querySelector('.js-textbox');
-        let cost = Number(inputElement.value);
-        if (cost < 40) {
-            cost = cost + 10;
+        let cost = (Number(inputElement.value))*100;
+        if (cost < 4000) {
+            cost = (cost + 1000)/100;
         } else {
             cost = cost;
         }
@@ -62,6 +62,6 @@
 
 
 
-  </script>
+</script>
 </body>
 </html>
