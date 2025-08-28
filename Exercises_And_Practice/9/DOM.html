@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DOM</title>
+  <style>
+    body {
+        background-color: gray;
+    }
+  </style>
+</head>
+<body>
+  <p>YouTube Subscribe Button</p>
+  <button class="js-subscribe-button">Subscribe</button>
+  <p></p>
+  <script>
+
+
+    let subscribeButtonElement = document.querySelector('.js-subscribe-button');
+
+    subscribeButtonElement.onclick = onSubscribe;
+
+    function onSubscribe() {
+        if (subscribeButtonElement.innerText === 'Subscribe') {
+            subscribeButtonElement.innerText = 'Subscribed';
+        } else if (subscribeButtonElement.innerText === 'Subscribed') {
+            subscribeButtonElement.innerText = 'Subscribe';
+        }
+    }
+
+
+
+  </script>
+</body>
+</html>
