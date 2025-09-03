@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>11j</title>
+  <style>
+      body {
+          background-color: gray;
+      }
+  </style>
+</head>
+<body>
+<script>
+    addArrays([1,1,2],[1,1,3]);
+    addArrays([1,2,3],[4,5,6]);
+
+    function addArrays(array1, array2) {
+        arrayOut = [];
+        for (let i = 0; i < array1.length && i < array2.length; i++) {
+            arrayOut[i] = array1[i] + array2[i];
+        }
+        console.log(arrayOut);
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>10d</title>
+  <style>
+    .gaming-button {
+        padding: 8px 16px;
+        border:none;
+        border-radius: 8px;
+        background-color: #dadada;
+        cursor: pointer;
+    }
+    .gaming-button-toggled {
+        background-color: #9f9f9f;
+        color: white;
+    }
+  </style>
+</head>
+<body>
+  <button class="js-button gaming-button">Gaming</button>
+  <script>
+    let gaming = document.querySelector('.js-button');
+    gaming.onclick = gamingFunction;
+    function gamingFunction() {
+        if (gaming.classList.contains('gaming-button-toggled')) {
+            gaming.classList.remove('gaming-button-toggled');
+        } else {
+            gaming.classList.add('gaming-button-toggled');
+        }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>11i</title>
+  <style>
+      body {
+          background-color: gray;
+      }
+  </style>
+</head>
+<body>
+<script>
+    addNum([1,2,3], 2);
+    addNum([1,2,3], 3);
+    addNum([-2,-1,0,99], 2)
+
+    function addNum(array, num) {
+        nums = [];
+        for (let i = 0; i < array.length; i++) {
+            nums.push(array[i]+num);
+
+        }
+        console.log(nums);
+    }
+</script>
+</body>
+</html>

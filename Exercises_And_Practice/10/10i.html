@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>9j</title>
+  <title>10i</title>
   <style>
       .grid {
           display: grid;
@@ -11,17 +11,35 @@
           row-gap: 12px;
           margin-bottom: 12px;
       }
+      button {
+          padding: 16px 22px;
+          background-color: #4c4c4c;
+          border: none;
+          color: white;
+          font-size: 20px;
+          font-weight: bold;
+          border-radius: 30px;
+          cursor: pointer;
+      }
 
+      .yellow-button {
+          background-color: #ffa72a;
+      }
       .container {
           width: 120px;
       }
       body {
-          background: gray;
+          background: #1b1b1b;
+      }
+
+      .calculatorResult {
+          color: white;
+          font-size: 25px;
       }
   </style>
 </head>
 <body>
-<p class="calculatorResultElement" style="max-width: 300px;"></p>
+<p class="calculatorResultElement calculatorResult" style="max-width: 300px;"></p>
 <div class="container">
   <div class="grid">
     <button onclick="
@@ -36,7 +54,7 @@
         updateCalculator('3');
       ">3</button>
 
-    <button onclick="
+    <button class="yellow-button" onclick="
         updateCalculator('+');
       ">+</button>
 
@@ -52,7 +70,7 @@
         updateCalculator('6');
       ">6</button>
 
-    <button onclick="
+    <button class="yellow-button" onclick="
         updateCalculator('-');
       ">-</button>
 
@@ -68,7 +86,7 @@
         updateCalculator('9');
       ">9</button>
 
-    <button onclick="
+    <button class="yellow-button" onclick="
         updateCalculator('*');
       ">*</button>
 
@@ -84,7 +102,7 @@
         updateCalculator('=');
       ">=</button>
 
-    <button onclick="
+    <button class="yellow-button" onclick="
         updateCalculator('/');
       ">/</button>
   </div>
@@ -96,7 +114,7 @@
     let calculation = JSON.parse(localStorage.getItem('save')) || '';
     updateCalculatorDisplay()
     function updateCalculatorDisplay() {
-         document.querySelector('.calculatorResultElement').innerHTML = calculation;
+        document.querySelector('.calculatorResultElement').innerHTML = calculation;
     }
 
 

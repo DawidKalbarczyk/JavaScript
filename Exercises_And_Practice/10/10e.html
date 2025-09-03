@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>10e</title>
+  <style>
+      body {
+          background-color: gray;
+      }
+      .gaming-button {
+          padding: 8px 16px;
+          border:none;
+          border-radius: 8px;
+          background-color: #dadada;
+          cursor: pointer;
+      }
+      .gaming-button-toggled {
+          background-color: black;
+          color: white;
+      }
+  </style>
+</head>
+<body>
+  <button class="js-button1 gaming-button">Gaming</button>
+  <button class="js-button2 gaming-button">Music</button>
+  <button class="js-button3 gaming-button">Tech</button>
+  <script>
+      let gaming = document.querySelector('.js-button1');
+      let music = document.querySelector('.js-button2');
+      let tech = document.querySelector('.js-button3');
+      gaming.onclick = function() {
+          onFunction('.js-button1');
+      }
+      music.onclick = function() {
+          onFunction('.js-button2');
+      }
+      tech.onclick = function() {
+          onFunction('.js-button3');
+      }
+
+      function onFunction(selector) {
+          let button = document.querySelector(selector);
+          if (button.classList.contains('gaming-button-toggled')) {
+              button.classList.remove('gaming-button-toggled');
+          } else {
+              button.classList.add('gaming-button-toggled');
+          }
+      }
+
+  </script>
+</body>
+</html>
