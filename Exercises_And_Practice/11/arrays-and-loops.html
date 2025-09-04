@@ -32,7 +32,7 @@
   test.splice(0, 2);
   console.log(test);
 
-     */
+
   const nums = [1, 1, 3];
 
   let total = 0;
@@ -46,6 +46,23 @@
       numsDoubled[i] = 2* nums[i];
   }
   console.log(numsDoubled);
+
+     */
+  const nums = [1,1,3];
+  let numsDoubled = [];
+  console.log(doubleNums(nums));
+  console.log(doubleNums([2,2,5, 0, 5]));
+  function doubleNums(selector) {
+      for (let i = 0; i < selector.length; i++) {
+          if (selector[i] === 0) {
+              numsDoubled[i] = 0;
+          } else {
+              numsDoubled[i] = selector[i] * 2;
+          }
+
+      }
+      return numsDoubled;
+  }
 </script>
 </body>
 </html>

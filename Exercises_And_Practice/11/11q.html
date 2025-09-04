@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>11q</title>
+  <style>
+      body {
+          background-color: gray;
+      }
+  </style>
+</head>
+<body>
+<script>
+
+    findIndex(['green','red','blue','red'], 'red');
+    findIndex(['green','red','blue','red'], 'yellow');
+
+    function findIndex(array, word) {
+        let result = -1;
+        for (let i=0; i < array.length; i++) {
+            if (array[i] === word) {
+                result = i;
+                break;
+            }
+        }
+        if (result === -1) {
+            console.log('Cannot find result');
+        } else {
+            console.log(`Found result for ${word} at index ${result}`);
+        }
+
+    }
+</script>
+</body>
+</html>

@@ -15,8 +15,14 @@ document.querySelector('.js-reset-button2').onclick = function() {
 
 todoArray1 = JSON.parse(localStorage.getItem('todos')) || [];
 todoArray2 = JSON.parse(localStorage.getItem('todos2'))  || [];
+todoArray3 = JSON.parse(localStorage.getItem('todos3'))  || [];
 console.log(todoArray2);
 renderArray();
+function renderArray3() {
+    for (let i = 0; i < todoArray1.length; i++) {
+        const todo = todoArray3
+    }
+}
 function resetButtonFunction(resetSelector) {
     if (resetSelector === '.js-reset-button') {
         todoArray1 = [];
@@ -43,7 +49,6 @@ function renderArray() {
         output += todoArray2[i] + "<br>";
     }
     outputParagraph();
-
 }
 function todoArrayFunction(selector) {
     let todoElement = document.querySelector(selector);

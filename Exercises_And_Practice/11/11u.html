@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>11u</title>
+  <style>
+      body {
+          background-color: gray;
+      }
+  </style>
+</head>
+<body>
+<script>
+    const foods = ['egg', 'apple', 'egg', 'egg', 'ham']
+    console.log(removeEgg(foods.slice()));
+    console.log(foods);
+    function removeEgg(foods) {
+        times = 0;
+        for  (let i = 0; i < foods.length; i++) {
+            if (foods[i] === 'egg') {
+                times = times + 1;
+                if (times > 2) {
+                    continue;
+                } else {
+                    foods.splice(i, 1);
+                    i -= 1;
+                }
+            } else {
+                continue;
+            }
+        }
+        foods.reverse();
+        return foods;
+    }
+
+</script>
+</body>
+</html>

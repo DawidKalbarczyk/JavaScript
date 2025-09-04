@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>11r</title>
+  <style>
+      body {
+          background-color: gray;
+      }
+  </style>
+</head>
+<body>
+<script>
+  removeEgg(['egg', 'apple', 'egg', 'egg', 'ham'])
+
+  function removeEgg(foods) {
+      for  (let i = 0; i < foods.length; i++) {
+          if (foods[i] === 'egg') {
+              foods.splice(i, 1);
+              i -= 1;
+          } else {
+              continue;
+          }
+      }
+      console.log(foods);
+  }
+</script>
+</body>
+</html>
