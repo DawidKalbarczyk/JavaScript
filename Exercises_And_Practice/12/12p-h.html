@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>12p-h</title>
+  <style>
+      body {
+          background-color: gray;
+      }
+  </style>
+</head>
+<body>
+<button onclick="result++; updateTitle();">
+  Add
+</button>
+<button onclick="result--; updateTitle();">
+  Remove
+</button>
+<script>
+    let result = 0;
+    function updateTitle() {
+        document.title = `(${result}) New messages`;
+        setTimeout(() => document.title = 'App', 2000)
+
+    }
+</script>
+</body>
+</html>

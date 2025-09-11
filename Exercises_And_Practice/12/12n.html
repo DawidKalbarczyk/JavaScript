@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>12n</title>
+  <style>
+      body {
+          background-color: gray;
+      }
+  </style>
+</head>
+<body>
+<button class="js-add-button">
+  Add
+</button>
+<button class="js-remove-button">
+  Remove
+</button>
+<script>
+    function removeEgg(foods) {
+        return foods.filter((food) => food !== 'egg');
+    }
+    console.log(removeEgg(['egg','apple','egg','egg','ham']));
+</script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>12e</title>
+  <style>
+      body {
+          background-color: gray;
+      }
+  </style>
+</head>
+<body>
+<button class="js-addButton">
+  Add to cart
+</button>
+<p class="js-paragraph"></p>
+<script>
+    const addCart = document.querySelector('.js-addButton');
+    const paragraph = document.querySelector('.js-paragraph');
+    addCart.onclick = function () {
+        paragraph.innerHTML = 'Added';
+        setTimeout(function () {
+            paragraph.innerHTML = '';
+        }, 2000)
+    }
+
+
+
+
+
+
+</script>
+</body>
+</html>

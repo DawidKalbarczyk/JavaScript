@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>12q-h</title>
+  <style>
+      body {
+          background-color: gray;
+      }
+  </style>
+</head>
+<body>
+<button class="add-button">
+  Add
+</button>
+<button class="remove-button">
+  Remove
+</button>
+<script>
+    let result = 0;
+    const addButton = document.querySelector('.add-button');
+    const removebutton = document.querySelector('.remove-button');
+    addButton.addEventListener('click', () => {
+        result++;
+        updateTitle();
+    });
+    removebutton.addEventListener('click', () => {
+        result--;
+        updateTitle();
+    });
+    function updateTitle() {
+        document.title = `(${result}) New messages`;
+        setTimeout(() => document.title = 'App', 2000)
+    }
+</script>
+</body>
+</html>

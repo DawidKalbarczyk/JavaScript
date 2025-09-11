@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>12q-d</title>
+  <style>
+      body {
+          background-color: gray;
+      }
+  </style>
+</head>
+<body>
+<button class="js-button">
+  Start
+</button>
+</button>
+<script>
+    const textInside = document.querySelector('.js-button');
+    textInside.addEventListener('click', () => {
+        textInside.innerHTML = 'Loading...';
+        setTimeout(() => textInside.innerHTML = 'Finished!', 1000);
+    });
+
+</script>
+</body>
+</html>

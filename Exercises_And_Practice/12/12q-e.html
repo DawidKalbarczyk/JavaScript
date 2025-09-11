@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>12q-e</title>
+  <style>
+      body {
+          background-color: gray;
+      }
+  </style>
+</head>
+<body>
+<button class="js-addButton">
+  Add to cart
+</button>
+<p class="js-paragraph"></p>
+<script>
+    const addCart = document.querySelector('.js-addButton');
+    const paragraph = document.querySelector('.js-paragraph');
+    addCart.addEventListener('click', () => {
+        paragraph.innerHTML = 'Added';
+        setTimeout(() => paragraph.innerHTML = '', 2000)
+    });
+
+
+
+</script>
+</body>
+</html>

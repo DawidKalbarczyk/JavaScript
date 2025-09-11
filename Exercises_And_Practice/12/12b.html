@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>11x</title>
+  <title>12b</title>
   <style>
       body {
           background-color: gray;
@@ -12,9 +12,16 @@
 <body>
 <script>
 
-  done in todo list
+    function runTwice(param) {
+        param();
+    }
 
-  9:29:45
+    runTwice(function() {
+        console.log('12b');
+        console.log('12b');
+    });
+
+
 </script>
 </body>
 </html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>12p-i</title>
+  <style>
+      body {
+          background-color: gray;
+      }
+  </style>
+</head>
+<body>
+<button class="js-add-button">
+  Add
+</button>
+<button class="js-remove-button">
+  Remove
+</button>
+<script>
+    let result = 0;
+    const addButton = document.querySelector('.js-add-button');
+    const removeButton = document.querySelector('.js-remove-button');
+    addButton.onclick = () => {
+        result++;
+        updateTitle()
+    }
+    removeButton.onclick = () => {
+        result--;
+        isZero();
+    }
+    function isZero() {
+        if (result < 0) {
+            result = 0;
+        } else {
+            updateTitle();
+        }
+    }
+    function updateTitle() {
+        document.title = `(${result}) New messages`;
+        setTimeout(() => {
+            document.title = 'App';
+        }, 2000)
+    }
+
+
+
+</script>
+</body>
+</html>
