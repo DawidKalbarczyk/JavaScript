@@ -2,9 +2,250 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Title</title>
+  <title>Checkout</title>
+  <link rel="stylesheet" href="style/checkout.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
+  <div class="header">
+    <a class="reflink" href="http://localhost:63342/JS%20Course/Exercises_And_Practice/amazon-project-bymself/amazon.html">
+      <div class="header1">
+        <img class="amazon-logo" src="images/amazon-logo.png">
+      </div>
+    </a>
 
+
+    <div class="header2">
+      <p class="checkout-title">
+        Checkout (
+        <a href="http://localhost:63342/JS%20Course/Exercises_And_Practice/amazon-project-bymself/amazon.html" style="text-decoration: none">
+          <span class="itemsNr">3 items</span>
+        </a>
+        )
+      </p>
+    </div>
+    <div class="header3">
+      <img class="shopping-bag" src="images/icons/checkout-lock-icon.png">
+    </div>
+  </div>
+
+  <div class="main-content-container">
+    <div class="review-order-container">
+      <p class="review-order-text">Review your order</p>
+    </div>
+    <div class="order-summary-container2-added">
+      <div class="order-summary-list">
+        <div style="font-size: 18px; font-weight: bold;">Order Summary</div>
+      </div>
+      <div class="first-order-info">
+        <div class="order-summary-items">
+          <div>
+            Items (3):
+          </div>
+          <div>
+            $42.75
+          </div>
+        </div>
+        <div class="order-summary-shipping">
+          <div>
+            Shipping & handling:
+          </div>
+          <div class="first-order-line">
+            $4.99
+          </div>
+        </div>
+      </div>
+      <div class="second-order-info">
+        <div class="order-summary-totalNoTax">
+          <div>
+            Total before tax:
+          </div>
+          <div>
+            $47.74
+          </div>
+        </div>
+        <div class="order-summary-totalWithTax">
+          <div>
+            Estimated tax (10%):
+          </div>
+          <div>
+            $4.77
+          </div>
+        </div>
+      </div>
+      <div class="order-summary-total">
+        <div>
+          Order total:
+        </div>
+        <div>
+          $52.51
+        </div>
+      </div>
+      <div class="order-summary-button-container">
+        <button class="order-summary-button">
+          Place your order
+        </button>
+      </div>
+    </div>
+    <div class="order-summary-container">
+      <div class="order-summary-container-grid">
+        <div class="order-summary-container1">
+          <p class="delivery-date">Delivery date: Tuesday, June 21</p>
+          <div class="items-container">
+            <div class="item-container1">
+              <img class="item-photo" src="images/products/athletic-cotton-socks-6-pairs.jpg">
+            </div>
+            <div class="item-container2">
+              <p class="item-name">Black and Gray Athletic Cotton Socks - 6 Pairs</p>
+              <p class="item-price">$10.90</p>
+              <div class="quantity-container">
+                <p style="white-space: nowrap;">Quantity: 2</p>
+                <p class="quantity-update">Update</p>
+                <p class="quantity-delete">Delete</p>
+              </div>
+            </div>
+            <div class="item-container3">
+              <div>
+                <p class="delivery-option-paragraph">Choose a delivery option:</p>
+                <div class="delivery-option-container">
+                  <input class="delivery-option-checkbox" type="checkbox">
+                  <div class="delivery-option-info">
+                    <p class="delivery-option-date">Tuesday, June 21</p>
+                    <p class="delivery-option-shipping">FREE Shipping</p>
+                  </div>
+                </div>
+              </div>
+
+
+
+              <div class="delivery-option-container">
+                <input class="delivery-option-checkbox" type="checkbox">
+                <div class="delivery-option-info">
+                  <p class="delivery-option-date">Wednesday, June 15</p>
+                  <p class="delivery-option-shipping">$4.99 Shipping</p>
+                </div>
+              </div>
+
+
+              <div class="delivery-option-container">
+                <input class="delivery-option-checkbox" type="checkbox">
+                <div class="delivery-option-info">
+                  <p class="delivery-option-date">Monday, June 13</p>
+                  <p class="delivery-option-shipping">$9.99 Shipping</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="order-summary-container1">
+          <p class="delivery-date">Delivery date: Wednesday, June 15</p>
+          <div class="items-container">
+            <div class="item-container1">
+              <img class="item-photo" src="images/products/intermediate-composite-basketball.jpg">
+            </div>
+            <div class="item-container2">
+              <p class="item-name">Intermediate Size Basketball</p>
+              <p class="item-price">$20.95</p>
+              <div class="quantity-container">
+                <p style="white-space: nowrap;">Quantity: 1</p>
+                <p class="quantity-update">Update</p>
+                <p class="quantity-delete">Delete</p>
+              </div>
+            </div>
+            <div class="item-container3">
+              <div>
+                <p class="delivery-option-paragraph">Choose a delivery option:</p>
+                <div class="delivery-option-container">
+                  <input class="delivery-option-checkbox" type="checkbox">
+                  <div class="delivery-option-info">
+                    <p class="delivery-option-date">Tuesday, June 21</p>
+                    <p class="delivery-option-shipping">FREE Shipping</p>
+                  </div>
+                </div>
+              </div>
+
+
+
+              <div class="delivery-option-container">
+                <input class="delivery-option-checkbox" type="checkbox">
+                <div class="delivery-option-info">
+                  <p class="delivery-option-date">Wednesday, June 15</p>
+                  <p class="delivery-option-shipping">$4.99 Shipping</p>
+                </div>
+              </div>
+
+
+              <div class="delivery-option-container">
+                <input class="delivery-option-checkbox" type="checkbox">
+                <div class="delivery-option-info">
+                  <p class="delivery-option-date">Monday, June 13</p>
+                  <p class="delivery-option-shipping">$9.99 Shipping</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="order-summary-container2">
+        <div class="order-summary-list">
+          <div style="font-size: 18px; font-weight: bold;">Order Summary</div>
+        </div>
+        <div class="first-order-info">
+          <div class="order-summary-items">
+            <div>
+              Items (3):
+            </div>
+            <div>
+              $42.75
+            </div>
+          </div>
+          <div class="order-summary-shipping">
+            <div>
+              Shipping & handling:
+            </div>
+            <div class="first-order-line">
+              $4.99
+            </div>
+          </div>
+        </div>
+        <div class="second-order-info">
+          <div class="order-summary-totalNoTax">
+            <div>
+              Total before tax:
+            </div>
+            <div>
+              $47.74
+            </div>
+          </div>
+          <div class="order-summary-totalWithTax">
+            <div>
+              Estimated tax (10%):
+            </div>
+            <div>
+              $4.77
+            </div>
+          </div>
+        </div>
+        <div class="order-summary-total">
+          <div>
+            Order total:
+          </div>
+          <div>
+            $52.51
+          </div>
+        </div>
+        <div class="order-summary-button-container">
+          <button class="order-summary-button">
+            Place your order
+          </button>
+        </div>
+      </div>
+    </div>
+
+
+</div>
 </body>
 </html>
