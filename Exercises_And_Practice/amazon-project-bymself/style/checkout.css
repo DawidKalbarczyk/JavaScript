@@ -1,0 +1,342 @@
+p {
+    margin: 0;
+}
+body {
+    font-family: Roboto;
+}
+
+.header {
+    height: 50px;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    padding: 0px 24px;
+}
+.reflink {
+    height: 100%;
+}
+.header1,
+.header2,
+.header3 {
+    height: 100%;
+    vertical-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+}
+.header2 {
+    flex: 6;
+    align-items: center;
+}
+.header1 {
+    max-width: 400px;
+    align-items: start;
+}
+.header3 {
+    align-items: end;
+}
+.amazon-logo {
+    object-fit: contain;
+    height: 60%;
+}
+.checkout-title {
+    font-size: 24px;
+    font-weight: 500;
+}
+.itemsNr {
+    color: #009595;
+    font-size: 17px;
+}
+
+/*                   MAIN CONTENT     */
+.main-content-container {
+    padding: 80px 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+.items-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.review-order-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: start;
+    flex: 1;
+}
+.review-order-text {
+    font-weight: bold;
+    font-size: 30px;
+    display: block;
+    margin-bottom: 20px;
+    white-space: nowrap;
+}
+.order-summary-container {
+    display: flex;
+    flex-direction: row;
+    column-gap: 16px;
+}
+.order-summary-container-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 12px;
+}
+
+.order-summary-container1 {
+    height: 100%;
+    border: solid 1px rgba(128,128,128, 0.3);
+    border-radius: 5px;
+    padding: 24px 20px 28px 20px;
+    min-width: 530px;
+    max-width: 600px;
+    vertical-align: top;
+    margin-top: 16px;
+    height: 80%;
+}
+
+.delivery-date {
+    color: #006800;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    white-space: nowrap;
+
+}
+.items-container {
+    display: grid;
+    grid-template-columns: 100px 1fr 1fr;
+    column-gap: 28px;
+}
+.item-container1 {
+    width: 100%;
+}
+.item-photo {
+    width: 100%;
+}
+
+.item-container2 {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+
+}
+
+.item-name {
+    font-size: 16px;
+    font-weight: 700;
+}
+.item-price {
+    color: #b50101;
+    font-weight: bold;
+
+}
+.quantity-container {
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+}
+.quantity-delete,
+.quantity-update {
+    color: #0080cd;
+}
+.quantity-delete:hover,
+.quantity-update:hover {
+    color: #bc7900;
+    cursor: pointer;
+}
+.item-container3 {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+.delivery-option-paragraph {
+    font-weight: 700;
+    margin-bottom: 16px;
+    white-space: nowrap;
+
+}
+.delivery-option-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    column-gap: 4px;
+}
+.delivery-option-checkbox {
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    border: 1px solid #777777;
+    appearance: none;
+    position: relative;
+    white-space: nowrap;
+    display: inline-block;
+    flex-shrink: 0;
+
+}
+.delivery-option-checkbox:hover {
+    border: 1px solid #4a4a4a;
+}
+.delivery-option-checkbox:checked::after {
+    width: 12px;
+    height: 12px;
+    background-color: #2e82ff;
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    border-radius: 5px;
+}
+.delivery-option-checkbox:checked {
+    border: 1px solid #2e82ff;
+}
+.delivery-option-checkbox:checked:hover {
+    border: 1px solid #0a41fb;
+}
+.delivery-option-checkbox:checked:hover::after {
+    background-color: #0a41fb;
+}
+.delivery-option-info {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2px;
+}
+.delivery-option-date {
+    color: #006800;
+    font-weight: 500;
+    white-space: nowrap;
+}
+.delivery-option-shipping {
+    color: #777777;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+/*                   DRUGA RAMKA               */
+.order-summary-container2-added,
+.order-summary-container2 {
+    border: 1px solid  rgba(128,128,128, 0.3);
+    border-radius: 5px;
+    padding: 18px 20px 18px 20px;
+    min-width: 200px;
+    vertical-align: top;
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.order-summary-container2 {
+    height: 100%;
+}
+
+.order-summary-list {
+
+}
+.order-summary-container2-added {
+    display: none;
+    padding: 24px 20px 28px 20px;
+    min-width: 400px;
+    max-width: 500px;
+
+}
+.first-order-info {
+    row-gap: 10px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 14px;
+}
+.order-summary-total,
+.order-summary-totalWithTax,
+.order-summary-totalNoTax,
+.order-summary-shipping,
+.order-summary-items {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.order-summary-container2 p {
+    font-size: 16px;
+    font-weight: 700;
+}
+.order-summary-container2 div {
+    font-size: 15px;
+    font-weight: 400;
+
+}
+
+.first-order-line {
+    border-bottom: 1px solid rgba(0,0,0, 0.2);
+    padding-bottom: 10px;
+    width: 50px;
+    display: flex;
+    justify-content: end;
+}
+.order-summary-totalWithTax {
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+    padding-bottom: 10px;
+}
+.second-order-info {
+    padding: 10px 0px 0px 0px;
+    row-gap: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.order-summary-total div {
+    padding: 18px 0px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #b10202;
+}
+.order-summary-button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+.order-summary-button {
+    background-color: #fbd200;
+    border: none;
+    border-radius: 16px;
+    width: 100%;
+    height: 45px;
+    font-size: 14px;
+    cursor: pointer;
+}
+.order-summary-button:hover {
+    background-color: #fbbf29;
+}
+
+@media (max-width: 1100px) {
+    .main-content-container {
+        padding-top: 80px;
+
+    }
+    .order-summary-container1 {
+        margin-top: 12px;
+        min-width: 400px;
+        height: 87%;
+    }
+
+    .order-summary-container2-added {
+        display: flex;
+        flex: 1;
+    }
+    .order-summary-container2 {
+        display: none;
+        max-width: 550px;
+    }
+    .items-container {
+        display: grid;
+        grid-template-columns: 100px 1fr;
+        column-gap: 28px;
+    }
+    .item-container3 {
+        margin-top: 20px;
+    }
+}
