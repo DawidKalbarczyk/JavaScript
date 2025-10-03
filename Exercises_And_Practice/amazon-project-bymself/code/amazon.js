@@ -11,6 +11,7 @@ function optionSelectGenerate() {
 ////////////////////////////////////////////////////////////
 // Import z pliku cart.js ktory ma export w zmiennej//
 import {cart as myCart} from "./cart.js";
+import {products} from "./products.js";
 let productsHTML = '';
 const cart = [];
 
