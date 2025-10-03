@@ -1,1 +1,2 @@
-const cart = [];
+// Eksport zmiennej do //
+export const cart = [];

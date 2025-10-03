@@ -21,6 +21,7 @@ p {
     right: 0;
     top: 0;
     height: 60px;
+    z-index: 10;
 }
 .headbar1 {
     display: flex;
@@ -279,7 +280,8 @@ p {
 }
 .item-button-container {
     display: flex;
-    flex-direction: row;
+    position: relative;
+    flex-direction: column;
     margin-top: 35px;
     vertical-align: top;
     width: 100%;
@@ -296,4 +298,25 @@ p {
 }
 .item-button:hover {
     background-color: #ffc73d;
+}
+
+.added-to-cart-container {
+    position: absolute;
+    top: -30px;
+    display: flex;
+    flex-direction: row;
+    column-gap: 6px;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+.added-to-cart-container-active {
+    opacity: 1;
+}
+.added-to-cart-img {
+    width: 20px;
+    height: 20px;
+}
+.added-to-cart-text {
+    color: #00873d;
+    font-size: 17px;
 }
