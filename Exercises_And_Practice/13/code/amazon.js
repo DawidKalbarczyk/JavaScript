@@ -61,6 +61,7 @@ document.querySelectorAll('.js-add-to-cart-button').forEach((button) => {
             }
         });
         const selectorQuantity = parseInt(document.querySelector(`.js-quantity-selector-${productId}`).value,10);
+        console.log(selectorQuantity);
         if (matchingItem) {
             matchingItem.quantity += selectorQuantity;
         } else {

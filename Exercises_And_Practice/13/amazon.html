@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+  <title>Amazon Project Dawid</title>
+  <link rel="stylesheet" href="style/amazon.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- HEADBAR -->
+  <div class="headbar">
+    <div class="headbar1">
+      <a href="http://localhost:63342/JS%20Course/Exercises_And_Practice/amazon-project-bymself/amazon.html">
+        <img class="amazon-logo" src="images/amazon-logo-white.png">
+        <img class="amazon-mobile-logo" src="images/amazon-mobile-logo-white.png">
+      </a>
+
+    </div>
+
+    <div class="headbar2">
+      <input class="input-bar" type="textbox" placeholder="Search">
+      <button class="search-button">
+        <img class="search-icon" src="images/icons/search-icon.png">
+      </button>
+    </div>
+
+    <div class="headbar3">
+      <a href="http://localhost:63342/JS%20Course/Exercises_And_Practice/amazon-project-bymself/orders.html">
+        <p class="return-orders">Returns <span class="orders-text">& Orders</span></p>
+      </a>
+      <a style="text-decoration: none;"href="http://localhost:63342/JS%20Course/Exercises_And_Practice/amazon-project-bymself/checkout.html">
+        <div class="cart-info-container">
+          <img class="cart-icon" src="images/icons/cart-icon.png">
+          <div class="cart-number js-cart-items"></div>
+          <div class="cart-text">Cart</div>
+        </div>
+      </a>
+    </div>
+  </div>
+<!-- HEADBAR -->
+
+  <div class="main-content-container js-products-grid"></div>
+  <script src="code/cart.js"></script>
+  <script src="code/products.js"></script>
+  <script src="code/amazon.js"></script>
+</body>
+</html>
+
