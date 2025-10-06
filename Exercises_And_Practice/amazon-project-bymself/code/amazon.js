@@ -13,9 +13,9 @@ function optionSelectGenerate() {
 import {cart, addToCart} from "./cart.js";
 import {products} from "./products.js";
 let productsHTML = '';
-const cart = [];
 
 
+12:55;45
 /////////////////Generowanie HTML///////////////////////////////
 products.forEach((product) => {
     productsHTML += `
