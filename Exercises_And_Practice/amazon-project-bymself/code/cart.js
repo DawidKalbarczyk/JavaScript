@@ -1,5 +1,11 @@
 // Eksport zmiennej do //
-export const cart = [];
+export const cart = [{
+    productId: "e43638ce-6aa0-4b85-b27f-e1d07eb678c6",
+    quantity: 2
+}, {
+    productId: "15b6fc6f-327a-4ec4-896f-486349e85a3d",
+    quantity: 1
+}];
 
 export function addToCart(productId) {
     //Nalezy przypisac wartosc do matchinItem//
@@ -20,5 +26,17 @@ export function addToCart(productId) {
             productId: productId,
             quantity: selectorQuantity
         });
+    }
+}
+export function cartAbove() {
+    let quantity = document.querySelector('.js-cart-quantity');
+    console.log(quantity);
+    if (quantity.innerHTML >= 10 && quantity.innerHTML < 100) {
+        quantity.classList.add('cart-above-10');
+    } else if (quantity.innerHTML >= 100) {
+        quantity.classList.add('cart-above-100');
+    } else {
+        quantity.classList.remove('cart-above-10');
+        quantity.classList.remove('cart-above-100');
     }
 }

@@ -10,12 +10,11 @@ function optionSelectGenerate() {
 
 ////////////////////////////////////////////////////////////
 // Import z pliku cart.js ktory ma export w zmiennej//
-import {cart, addToCart} from "./cart.js";
+import {cart, addToCart, cartAbove} from "./cart.js";
 import {products} from "./products.js";
 let productsHTML = '';
 
 
-12:55;45
 /////////////////Generowanie HTML///////////////////////////////
 products.forEach((product) => {
     productsHTML += `
@@ -73,19 +72,22 @@ let index = 0;
 
 
 
+document.querySelector('.js-cart-items').innerHTML = Number(JSON.parse(localStorage.getItem('cart'))) || 0;
+cartAbove();
 
-
+let storageQuantity = Number(JSON.parse(localStorage.getItem('cart'))) || 0;
 ////////////////////////Nasluchiwanie przycisku i obliczanie ilosci w cart////////////////////////////////
 function updateCartQuantity(productId) {
     /////// Obliczenie calkowitej ilosci przedmiotow w koszyku //////
     let totalQuantity = 0;
     cart.forEach((cartItem) => {
-        totalQuantity = totalQuantity += cartItem.quantity;
+        totalQuantity += cartItem.quantity;
     });
-    document.querySelector('.js-cart-items').innerHTML = totalQuantity;
+    totalQuantity += storageQuantity;
     /////////////////////////////////////////////////////////////////
-
-
+    localStorage.setItem('cart', JSON.stringify(totalQuantity));
+    document.querySelector('.js-cart-items').innerHTML = totalQuantity;
+    cartAbove();
 
     // Wyczyszczenie timeouta (aby mogl powstac nowy podczas klikniecia przycisku w trakcie trwania starego timeouta) //
     clearTimeout(timeoutId[index]);
@@ -96,6 +98,7 @@ function updateCartQuantity(productId) {
         document.querySelector(`.js-added-to-cart-container-${productId}`).classList.remove('added-to-cart-container-active');
     }, 2500);
     index++;
+
 }
 
 

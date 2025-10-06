@@ -145,6 +145,14 @@ p {
     font-weight: bold;
     margin-left: 0px;
 }
+.cart-above-10 {
+    margin-left: -5px;
+}
+
+.cart-above-100 {
+    margin-left: -10px;
+    margin-bottom: -8px;
+}
 /* *//* *//* *//* *//* *//* *//* *//* *//* *//* *//* *//* *//* *//* *//* *//* */
 /*          Glowny watek                                                      */
 /* *//* *//* *//* *//* *//* *//* *//* *//* *//* *//* *//* *//* *//* *//* *//* */
