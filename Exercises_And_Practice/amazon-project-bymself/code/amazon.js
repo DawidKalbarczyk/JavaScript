@@ -12,6 +12,7 @@ function optionSelectGenerate() {
 // Import z pliku cart.js ktory ma export w zmiennej//
 import {cart, addToCart, cartAbove} from "./cart.js";
 import {products} from "./products.js";
+import {formatCurrency} from '../utils/money.js';
 let productsHTML = '';
 
 
@@ -88,7 +89,6 @@ function updateCartQuantity(productId) {
     localStorage.setItem('cart', JSON.stringify(totalQuantity));
     document.querySelector('.js-cart-items').innerHTML = totalQuantity;
     cartAbove();
-
     // Wyczyszczenie timeouta (aby mogl powstac nowy podczas klikniecia przycisku w trakcie trwania starego timeouta) //
     clearTimeout(timeoutId[index]);
 

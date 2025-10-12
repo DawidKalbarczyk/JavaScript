@@ -17,8 +17,9 @@ document.querySelector('.js-reset-cart-button').addEventListener('click', () => 
     }
 });
 
-import {cart} from "./cart.js";
+import {cart, removeFromCart} from "./cart.js";
 import {products} from "./products.js";
+import {formatCurrency} from '../utils/money.js';
 
 let cartSummaryHTML = '';
 cart.forEach((cartItem) => {
@@ -28,6 +29,7 @@ cart.forEach((cartItem) => {
         if (product.id === productId) {
             matchingProduct = product;
         }
+
     });
     cartSummaryHTML += `
     <div class="order-summary-container1">
@@ -38,18 +40,18 @@ cart.forEach((cartItem) => {
         </div>
         <div class="item-container2">
           <p class="item-name">${matchingProduct.name}</p>
-          <p class="item-price">${matchingProduct.price / 100}</p>
+          <p class="item-price">$${formatCurrency(matchingProduct.priceCents)}</p>
           <div class="quantity-container">
-            <p style="white-space: nowrap;">${cartItem.quantity}</p>
+            <p style="white-space: nowrap;">Quantity: ${cartItem.quantity}</p>
             <p class="quantity-update">Update</p>
-            <p class="quantity-delete">Delete</p>
+            <p class="quantity-delete js-delete-link" data-product-id="${matchingProduct.id}">Delete</p>
           </div>
         </div>
         <div class="item-container3">
           <div>
             <p class="delivery-option-paragraph">Choose a delivery option:</p>
             <div class="delivery-option-container">
-              <input class="delivery-option-checkbox" type="checkbox">
+              <input class="delivery-option-checkbox" type="radio" name="delivery-option-${matchingProduct.id}">
               <div class="delivery-option-info">
                 <p class="delivery-option-date">Tuesday, June 21</p>
                 <p class="delivery-option-shipping">FREE Shipping</p>
@@ -60,7 +62,7 @@ cart.forEach((cartItem) => {
     
     
           <div class="delivery-option-container">
-            <input class="delivery-option-checkbox" type="checkbox">
+            <input class="delivery-option-checkbox" type="radio" name="delivery-option-${matchingProduct.id}">
             <div class="delivery-option-info">
               <p class="delivery-option-date">Wednesday, June 15</p>
               <p class="delivery-option-shipping">$4.99 Shipping</p>
@@ -69,7 +71,7 @@ cart.forEach((cartItem) => {
     
     
           <div class="delivery-option-container">
-            <input class="delivery-option-checkbox" type="checkbox">
+            <input class="delivery-option-checkbox" type="radio" name="delivery-option-${matchingProduct.id}">
             <div class="delivery-option-info">
               <p class="delivery-option-date">Monday, June 13</p>
               <p class="delivery-option-shipping">$9.99 Shipping</p>
@@ -80,6 +82,16 @@ cart.forEach((cartItem) => {
     </div>
 `});
 console.log(cartSummaryHTML);
-//document.querySelector('.js-checkout-button').innerHTML = cartSummaryHTML;
+document.querySelector('.js-checkout-order-grid')
+    .innerHTML = cartSummaryHTML;
 
-13:15:35
+
+// Wykonuje to ze nasluch jest dla kazdego linku ktory ma unikalne id (wygenerowane bloczki)
+document.querySelectorAll('.js-delete-link').forEach(link => {
+    link.addEventListener('click', (event) => {
+        const productId = link.dataset.productId;
+        removeFromCart(productId);
+    })
+})
+
+

@@ -1,5 +1,5 @@
 // Eksport zmiennej do //
-export const cart = [{
+export let cart = [{
     productId: "e43638ce-6aa0-4b85-b27f-e1d07eb678c6",
     quantity: 2
 }, {
@@ -39,4 +39,15 @@ export function cartAbove() {
         quantity.classList.remove('cart-above-10');
         quantity.classList.remove('cart-above-100');
     }
+}
+
+export function removeFromCart(productId) {
+    const newCart = [];
+    cart.forEach((item) => {
+        if (item.productId !== productId ) {
+            newCart.push(item);
+        }
+    })
+
+    cart = newCart;
 }
