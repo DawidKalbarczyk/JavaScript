@@ -32,7 +32,7 @@ cart.forEach((cartItem) => {
 
     });
     cartSummaryHTML += `
-    <div class="order-summary-container1">
+    <div class="order-summary-container1 js-cart-item-container-${matchingProduct.id}">
       <p class="delivery-date">Delivery date: Tuesday, June 21</p>
       <div class="items-container">
         <div class="item-container1">
@@ -86,11 +86,16 @@ document.querySelector('.js-checkout-order-grid')
     .innerHTML = cartSummaryHTML;
 
 
-// Wykonuje to ze nasluch jest dla kazdego linku ktory ma unikalne id (wygenerowane bloczki)
+// Wykonuje to ze nasluch jest dla kazdego linku ktory ma unikalne id (wygenerowane bloczki). Usuwa dany item z cartu
 document.querySelectorAll('.js-delete-link').forEach(link => {
     link.addEventListener('click', (event) => {
         const productId = link.dataset.productId;
         removeFromCart(productId);
+
+        // Usuwa bloczki z DOMA (wczesniej tylko z cartu, ale dalej bylo wygenerowane na podstawie poprzedniego)
+        const container = document.querySelector(`.js-cart-item-container-${productId}`);
+        console.log(container);
+        container.remove();
     })
 })
 
